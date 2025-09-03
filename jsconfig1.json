@@ -1,0 +1,19 @@
+{
+  "inputs": [
+    {
+      "type": "DiagnosticSource",
+      "sources": [
+        {
+          "name": "MotorControl",
+          "events": [
+            { "eventName": "*", "keywords": "Events" }
+          ]
+        }
+      ]
+    }
+  ],
+  "outputs": [
+    { "type": "StdOutput" }
+  ],
+  "schemaVersion": "2016-08-11"
+}
