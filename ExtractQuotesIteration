@@ -1,0 +1,59 @@
+using HtmlAgilityPack;
+
+// await ConcurrentDownload();
+await ScrapeQuotes(10);
+
+static async Task ScrapeQuotes(Int32 count)
+{
+    Int32 total = 0;
+    foreach (Int32 i in Enumerable.Range(1, count))
+    {
+        Console.Write($"Downloading page {i:N0}");
+        String html = await DownloadAsync($"http://quotes.toscrape.com/page/{i}");
+        IEnumerable<String> quotes = ExtractQuotes(html);
+        total += quotes.Count();
+        Console.Write($" => got {quotes.Count()} quotes | total: {total:N0}{Environment.NewLine}");
+
+        foreach (var quote in quotes)
+        {
+            Console.WriteLine($"* {quote}");
+        }
+        Console.WriteLine(); Console.WriteLine();
+    }
+    Console.WriteLine($"Downloaded {count:N0} pages with {total:N0} quotes");
+}
+
+static IEnumerable<string> ExtractQuotes(string html)
+{
+    var doc = new HtmlDocument();
+    doc.LoadHtml(html);
+
+    return doc.DocumentNode.SelectNodes("//span[@class='text']")?.Select(n => HtmlEntity.DeEntitize(n.InnerText.Trim())) ?? [];
+}
+
+static async Task ConcurrentDownload()
+{
+    String[] urls = ["https://google.com", "https://example.com", "https://roda-computer.com"];
+    Task<String>[] jobs = [.. urls.Select(DownloadAsync)];
+
+    try
+    {
+        String[] pages = await Task.WhenAll(jobs);
+
+        for (int i = 0; i < urls.Length; i++)
+        {
+            Console.WriteLine($"{urls[i],-45} -> {pages[i].Length:N0} chars");
+        }
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine("some urls failed to download");
+    }
+}
+
+static async Task<string> DownloadAsync(String url)
+{
+    using HttpClient client = new HttpClient();
+    return await client.GetStringAsync(url);
+}
+    
