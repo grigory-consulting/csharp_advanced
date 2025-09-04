@@ -27,6 +27,15 @@ https://learn.microsoft.com/en-us/sysinternals/
 DebugView
 WinObj
 
+# Ethernet
+
+https://npcap.com/#download
+https://github.com/dotpcap/sharppcap
+
+# USB 
+
+https://github.com/LibUsbDotNet/LibUsbDotNet
+
 
 
 
