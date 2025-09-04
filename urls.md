@@ -13,3 +13,8 @@ https://github.com/microsoft/Windows-driver-samples/
 # Windows driver Kit (WDK)
 
 https://learn.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk
+
+## powershell/cmd commands (as Administrator)
+
+bcdedit /set testsigning on 
+bcdedit /set nointegritychecks on
