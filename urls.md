@@ -21,3 +21,12 @@ bcdedit /set nointegritychecks on
 
 ## Disable Secure Boot
 vm.efi.secureboot=0 as a boot flag
+
+## Sysinternals
+https://learn.microsoft.com/en-us/sysinternals/
+DebugView
+WinObj
+
+
+
+
