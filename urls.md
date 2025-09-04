@@ -9,3 +9,7 @@ https://www.eltima.com/products/vspdxp/
 # Windows driver samples
 
 https://github.com/microsoft/Windows-driver-samples/
+
+# Windows driver Kit (WDK)
+
+https://learn.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk
