@@ -5,3 +5,7 @@ https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/lo
 # Virtual Serial Port Driver
 
 https://www.eltima.com/products/vspdxp/
+
+# Windows driver samples
+
+https://github.com/microsoft/Windows-driver-samples/
