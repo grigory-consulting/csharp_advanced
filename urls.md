@@ -16,21 +16,21 @@ https://learn.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk
 
 ## powershell/cmd commands (as Administrator)
 
-bcdedit /set testsigning on 
-bcdedit /set nointegritychecks on
+- bcdedit /set testsigning on 
+- bcdedit /set nointegritychecks on
 
 ## Disable Secure Boot
 vm.efi.secureboot=0 as a boot flag
 
 ## Sysinternals
-https://learn.microsoft.com/en-us/sysinternals/
-DebugView
-WinObj
+- https://learn.microsoft.com/en-us/sysinternals/
+- DebugView
+- WinObj
 
 # Ethernet
 
-https://npcap.com/#download
-https://github.com/dotpcap/sharppcap
+- https://npcap.com/#download
+- https://github.com/dotpcap/sharppcap
 
 # USB 
 
