@@ -1,18 +1,18 @@
 # Lock
 
-https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/lock
+- https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/statements/lock
 
 # Virtual Serial Port Driver
 
-https://www.eltima.com/products/vspdxp/
+- https://www.eltima.com/products/vspdxp/
 
 # Windows driver samples
 
-https://github.com/microsoft/Windows-driver-samples/
+- https://github.com/microsoft/Windows-driver-samples/
 
 # Windows driver Kit (WDK)
 
-https://learn.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk
+- https://learn.microsoft.com/en-us/windows-hardware/drivers/download-the-wdk
 
 ## powershell/cmd commands (as Administrator)
 
